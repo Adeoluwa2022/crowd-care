@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import HeroImg from '../../images/HeroBg.png';
+import HeroImg from '../../images/HeroBg.jpg';
 import '../../fonts/webfont.css';
 
 export const HeroContainer = styled.div`

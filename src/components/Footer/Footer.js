@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Alert } from 'react-bootstrap';
 import { collection, addDoc } from 'firebase/firestore';
-import { db } from '../../firebase';
+import { db } from 'firebase/database';
 import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram  } from 'react-icons/fa';
 import {
     FooterContainer,
@@ -33,7 +33,7 @@ const Footer = () => {
                 email
             };
             
-            const docRef = await addDoc(collection(db, 'newsletters'), newsletterData);
+            const docRef = await addDoc(collection('db', 'newsletters'), newsletterData);
             
             setEmail('');
             
