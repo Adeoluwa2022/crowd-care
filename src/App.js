@@ -10,29 +10,32 @@ import ProfilePage from './pages/profile';
 import ProtectedRoute from './components/Entry/ProtectedRoute';
 import { UserAuthContextProvider } from './context/userAuthContext';
 import './App.css';
+import ErrorBoundary from 'antd/es/alert/ErrorBoundary';
 
 function App() {
   return (
     <Router>
-    <UserAuthContextProvider>
-        <Routes>
-        <Route
-          path='/profile'
-          element={
-            <ProtectedRoute>
-              <ProfilePage />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/book" element={<Book />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<LogIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        </Routes>
-    </UserAuthContextProvider>
+      <UserAuthContextProvider>
+        <ErrorBoundary>
+          <Routes>
+          <Route
+            path='/profile'
+            element={
+              <ProtectedRoute>
+               <ProfilePage />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/book" element={<Book />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          </Routes>
+        </ErrorBoundary>
+      </UserAuthContextProvider>
     </Router>
   );
 };
