@@ -59,7 +59,7 @@ const AboutPage = () => {
           </Paragraph>
 
           <Paragraph>
-           <Link to='https://github.com/MsGeeO/my-app' target='_blank'><FaGithub size='20px' color='#000' /> Project Repository</Link>
+           <Link to='https://github.com/MsGeeO/crowd-care' target='_blank'><FaGithub size='20px' color='#000' /> Project Repository</Link>
           </Paragraph>
 
          </ValueText>
