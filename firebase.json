@@ -1,16 +1,19 @@
 {
-  "hosting": {
-    "public": "build", // The directory that contains your built app.
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html" // Ensures single-page app routing.
-      }
-    ]
+    "database": {
+      "rules": "database.rules.json"
+    },
+    "hosting": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
   }
-}
